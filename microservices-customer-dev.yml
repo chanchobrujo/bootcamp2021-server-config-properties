@@ -1,11 +1,11 @@
+server:
+  port: 9591
+
 spring:
   data:
     mongodb:
       auto-index-creation: true
       database: microservicescustomer
-
-server:
-  port: 9591
 
 eureka:
   client:
