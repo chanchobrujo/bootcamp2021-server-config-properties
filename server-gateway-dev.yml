@@ -22,3 +22,15 @@ spring:
             - Path=/microservices/customer/**
           filters:
             - StripPrefix=2
+        - id: microservices-accounts
+          uri: lb://microservices-accounts
+          predicates:
+            - Path=/microservices/accounts/**
+          filters:
+            - StripPrefix=2
+        - id: microservices-credits
+          uri: lb://microservices-credits
+          predicates:
+            - Path=/microservices/credits/**
+          filters:
+            - StripPrefix=2
