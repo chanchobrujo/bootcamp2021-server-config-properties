@@ -13,7 +13,7 @@ spring:
         - id: server-generated-encrypt
           uri: lb://server-generated-encrypt
           predicates:
-            - Path=/servicelogic/**
+            - Path=/service/generated/encrypt/**
           filters:
             - StripPrefix=2
         - id: microservices-customer
