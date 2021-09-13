@@ -10,8 +10,8 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: service-encript-generated
-          uri: lb://service-encript-generated
+        - id: service-logic
+          uri: lb://service-logic
           predicates:
             - Path=/service-logic/**
           filters:
