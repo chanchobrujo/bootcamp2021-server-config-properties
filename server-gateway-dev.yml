@@ -10,6 +10,12 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: service-encript-generated
+          uri: lb://service-encript-generated
+          predicates:
+            - Path=/service-logic/**
+          filters:
+            - StripPrefix=2
         - id: microservices-customer
           uri: lb://microservices-customer
           predicates:
