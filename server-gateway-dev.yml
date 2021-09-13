@@ -1,14 +1,3 @@
-spring:
-  cloud:
-    gateway:
-      routes:
-        -id: microservices-customer
-          uri: lb://microservices-customer
-          predicates:
-          - Path=/microservices/customer/**
-          filters:
-          - StripPrefix=2
-
 eureka:
   client:
     service-url:
@@ -16,3 +5,14 @@ eureka:
   instance:
     instance-id: ${spring.application.name}:${random.value}
     prefer-ip-address: true
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        -id: microservices-customer
+          uri: microservices-customer
+          predicates:
+          - Path=/microservices/customer/**
+          filters:
+          - StripPrefix=2
