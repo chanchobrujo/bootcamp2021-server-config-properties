@@ -10,10 +10,10 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: server-logic
+        - id: server-logic #el nombre solo debe tener un '-'
           uri: lb://server-logic
           predicates:
-            - Path=/service/logic/**
+            - Path=/server/logic/**
           filters:
             - StripPrefix=2
         - id: microservices-customer
