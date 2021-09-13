@@ -10,9 +10,9 @@ spring:
   cloud:
     gateway:
       routes:
-      -id: microservices-customer
-        uri: lb://microservices-customer
-        predicates:
-          - Path=/microservices/customer/**
-        filters:
-          - StripPrefix=2
+        - id: microservices-customer
+          uri: lb://microservices-customer
+          predicates:
+            - Path=/microservices/customer/**
+          filters:
+            - StripPrefix=2
