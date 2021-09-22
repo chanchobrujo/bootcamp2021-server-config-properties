@@ -9,4 +9,5 @@ http://localhost:9500/server/logic/encriptpassword/kevin123
 
 http://localhost:9500/microservices/customer/
 http://localhost:9500/microservices/accounts/
+http://localhost:9500/microservices/retire/
 
