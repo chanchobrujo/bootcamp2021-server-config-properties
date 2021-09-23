@@ -38,5 +38,9 @@ spring:
           uri: lb://microservices-retire
           predicates:
             - Path=/microservices/retire/**
+        - id: microservices-deposit
+          uri: lb://microservices-deposit
+          predicates:
+            - Path=/microservices/deposit/**
           filters:
             - StripPrefix=2
