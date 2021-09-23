@@ -2,7 +2,7 @@ spring:
   data:
     mongodb:
       auto-index-creation: true
-      database: microservicesretire
+      database: microservicesdeposit
 
 eureka:
   client:
