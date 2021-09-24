@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "0d839c52-26e8-4cbb-afdc-422c894c2a4d",
+		"name": "Customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9500/microservices/customer/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"microservices",
+						"customer",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9500/microservices/customer/613a2da1812b845f3b3a391b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"microservices",
+						"customer",
+						"613a2da1812b845f3b3a391b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"namecustomer\":\"Yoreli\",\r\n    \"lastnamecustomer\":\"Cumpa\",\r\n    \"documentType\":\"DNI\",\r\n    \"numberdocument\":\"12365480\",\r\n    \"numberphone\":\"963852094\",\r\n    \"emailaddress\":\"Yoreli@hotmail.com\",\r\n    \"typecustomer\":\"Personal\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9500/microservices/customer/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9500",
+					"path": [
+						"microservices",
+						"customer",
+						"save"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

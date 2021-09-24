@@ -44,9 +44,3 @@ spring:
             - Path=/microservices/deposit/**
           filters:
             - StripPrefix=2
-        - id: microservices-deposit
-          uri: lb://microservices-deposit
-          predicates:
-            - Path=/microservices/deposit/**
-          filters:
-            - StripPrefix=2
