@@ -2,7 +2,7 @@ spring:
   data:
     mongodb:
       auto-index-creation: true
-      database: microservicescommission
+      database: microservicesmovement
 
 eureka:
   client:

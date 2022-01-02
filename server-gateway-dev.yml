@@ -1,54 +1,54 @@
 eureka:
-    client:
-        service-url:
-            defaultZone: http://localhost:8761/eureka
-    instance:
-        instance-id: ${spring.application.name}:${random.value}
-        prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+    prefer-ip-address: true
 
 spring:
-    cloud:
-        gateway:
-            routes:
-                - id: server-logic #el nombre solo debe tener un '-'
-                  uri: lb://server-logic
-                  predicates:
-                      - Path=/server/logic/**
-                  filters:
-                      - StripPrefix=2
-                - id: microservices-customer
-                  uri: lb://microservices-customer
-                  predicates:
-                      - Path=/microservices/customer/**
-                  filters:
-                      - StripPrefix=2
-                - id: microservices-accounts
-                  uri: lb://microservices-accounts
-                  predicates:
-                      - Path=/microservices/accounts/**
-                  filters:
-                      - StripPrefix=2
-                - id: microservices-credits
-                  uri: lb://microservices-credits
-                  predicates:
-                      - Path=/microservices/credits/**
-                  filters:
-                      - StripPrefix=2
-                - id: microservices-retire
-                  uri: lb://microservices-retire
-                  predicates:
-                      - Path=/microservices/retire/**
-                  filters:
-                      - StripPrefix=2
-                - id: microservices-deposit
-                  uri: lb://microservices-deposit
-                  predicates:
-                      - Path=/microservices/deposit/**
-                  filters:
-                      - StripPrefix=2
-                - id: microservices-commission
-                  uri: lb://microservices-commission
-                  predicates:
-                      - Path=/microservices/commission/**
-                  filters:
-                      - StripPrefix=2
+  cloud:
+    gateway:
+      routes:
+        - id: server-logic #el nombre solo debe tener un '-'
+          uri: lb://server-logic
+          predicates:
+            - Path=/server/logic/**
+          filters:
+            - StripPrefix=2
+        - id: microservices-customer
+          uri: lb://microservices-customer
+          predicates:
+            - Path=/microservices/customer/**
+          filters:
+            - StripPrefix=2
+        - id: microservices-accounts
+          uri: lb://microservices-accounts
+          predicates:
+            - Path=/microservices/accounts/**
+          filters:
+            - StripPrefix=2
+        - id: microservices-credits
+          uri: lb://microservices-credits
+          predicates:
+            - Path=/microservices/credits/**
+          filters:
+            - StripPrefix=2
+        - id: microservices-retire
+          uri: lb://microservices-retire
+          predicates:
+            - Path=/microservices/retire/**
+          filters:
+            - StripPrefix=2
+        - id: microservices-deposit
+          uri: lb://microservices-deposit
+          predicates:
+            - Path=/microservices/deposit/**
+          filters:
+            - StripPrefix=2
+        - id: microservices-commission
+          uri: lb://microservices-commission
+          predicates:
+            - Path=/microservices/commission/**
+          filters:
+            - StripPrefix=2
