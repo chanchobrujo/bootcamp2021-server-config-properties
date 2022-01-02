@@ -35,15 +35,9 @@ spring:
           filters:
             - StripPrefix=2
         - id: microservices-retire
-          uri: lb://microservices-retire
+          uri: lb://microservices-movement
           predicates:
-            - Path=/microservices/retire/**
-          filters:
-            - StripPrefix=2
-        - id: microservices-deposit
-          uri: lb://microservices-deposit
-          predicates:
-            - Path=/microservices/deposit/**
+            - Path=/microservices/movement/**
           filters:
             - StripPrefix=2
         - id: microservices-commission
