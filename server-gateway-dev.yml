@@ -34,7 +34,7 @@ spring:
             - Path=/microservices/credits/**
           filters:
             - StripPrefix=2
-        - id: microservices-retire
+        - id: microservices-movement
           uri: lb://microservices-movement
           predicates:
             - Path=/microservices/movement/**
